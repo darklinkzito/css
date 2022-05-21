@@ -5,6 +5,8 @@ import {useState} from 'react';
 function App() {
   const n = 15;
   const [name] = useState("André");
+
+  const redTitle = false;
   return (
     <div className="App">
     {/* CSS Global */}
@@ -20,6 +22,8 @@ function App() {
       <h2 style={n < 10 ? ({color: "purple"}) : ({color: "pink"})}>CSS Dinâmico</h2>
       <h2 style={n > 10 ? ({color: "purple"}) : ({color: "pink"})}>CSS Dinâmico</h2>
       <h2 style={name == "André" ? ({color: "gold", backgroundColor: "green"}) : ({color: "pink"})}>André</h2>
+    {/* Classe Dinâmica */}
+    <h2 className={redTitle ? ("red-title") : ("title")}>Este titulo vai ter classe dinâmica</h2>
     </div>
   );
 }
